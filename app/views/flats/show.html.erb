@@ -1,0 +1,18 @@
+<div style="background-image:url(<%= @flat.picture_url %>); height: 250px; background-size: cover;">
+</div>
+<div class="position-relative d-flex flex-column align-items-center" style="top: -50px;">
+  <div class="bg-light w-75 m-2 p-3">
+    <h1><%= @flat.name %></h1>
+    <p><%= @flat.address %></p>
+  </div>
+  <div class="bg-light w-75 m-2 p-3">
+    <h2>A bit more about this flat...</h2>
+    <p><%= @flat.description %></p>
+  </div>
+  <div class="bg-light w-75 m-2 p-3">
+    <h2>Details</h2>
+    <i class="fas fa-users"><%= @flat.number_of_guests %></i>
+    <i class="fas fa-euro-sign mr-3 ml-3"><%= @flat.price_per_night %></i>
+  </div>
+</div>
+<%= link_to 'Back', flats_path %>

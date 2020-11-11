@@ -7,9 +7,17 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar bg-light">
+      <h2 class="navbar-brand">Simple Airbnb</h2>
+      <button class="btn btn-outline-primary btn-sm"><%= link_to 'Add Flat', new_flat_path %></button>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

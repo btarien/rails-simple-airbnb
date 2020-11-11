@@ -1,0 +1,13 @@
+
+<%= simple_form_for(@flat) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :number_of_guests, as: :numeric %>
+  <%= f.input :price_per_night, as: :numeric %>
+  <%= f.input :picture_url %>
+  <%= f.button :submit, class: "btn btn-primary"%>
+<% end %>
